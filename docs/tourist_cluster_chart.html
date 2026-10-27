@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tourist Count per Cluster - Tourism Intelligence India</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background-color: #030712;
+      color: #F8FAFC;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+    }
+    .wrapper {
+      max-width: 960px;
+      width: 100%;
+      background: #080D1A;
+      border: 1px solid #1E293B;
+      border-radius: 20px;
+      padding: 32px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+    }
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid #1E293B;
+    }
+    .btn {
+      background: #0D9488;
+      color: #FFFFFF;
+      border: none;
+      padding: 8px 18px;
+      border-radius: 8px;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .btn:hover { background: #0F766E; }
+    .chart-container {
+      width: 100%;
+      border-radius: 12px;
+      overflow: hidden;
+      background: #0B1120;
+    }
+    svg { display: block; width: 100%; height: auto; }
+    .hint {
+      margin-top: 18px;
+      font-size: 12px;
+      color: #64748B;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="wrapper">
+    <div class="toolbar">
+      <div>
+        <h2 style="font-size: 18px; font-weight: 700; color: #F8FAFC;">Tourism Intelligence India - ML Analytics</h2>
+        <p style="font-size: 12px; color: #94A3B8;">Figure 7.2: Tourist Population per Behavioral Persona Cluster</p>
+      </div>
+      <button class="btn" onclick="window.print()">Print / Save as PDF</button>
+    </div>
+
+    <div class="chart-container">
+      <!-- Embedded SVG -->
+      <img src="tourist_count_per_cluster.svg" alt="Tourist Count per Cluster" style="width: 100%; display: block;" />
+    </div>
+
+    <p class="hint">Press <strong>Win + Shift + S</strong> to take a screenshot, or right-click to copy image for your report.</p>
+  </div>
+
+</body>
+</html>

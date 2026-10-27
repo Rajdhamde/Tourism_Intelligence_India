@@ -1,0 +1,334 @@
+{
+  "scaler": {
+    "means": [
+      0.5402466666666667,
+      0.46637,
+      0.5064733333333333,
+      0.4695866666666667,
+      0.47011333333333294,
+      0.4687100000000002,
+      0.48900000000000055,
+      0.42823333333333335
+    ],
+    "stds": [
+      0.23633645329393344,
+      0.28536608026650023,
+      0.2794518848667075,
+      0.22549381918112282,
+      0.2313770814541108,
+      0.2836250563096755,
+      0.2253419623594329,
+      0.1532684319167591
+    ]
+  },
+  "centroids": [
+    [
+      -0.7609274805233803,
+      1.4654468503715292,
+      -1.100483387361768,
+      -0.11738246176309841,
+      0.7834355004767176,
+      1.4687846097497537,
+      0.04881469871312226,
+      0.3646172471826505
+    ],
+    [
+      1.1963632291316113,
+      -0.7912866288294866,
+      1.1707311634669415,
+      -0.7542046405798875,
+      0.09215705448882026,
+      -0.8003556245857868,
+      0.04881469871312226,
+      -0.2103064077202763
+    ],
+    [
+      -0.8203402124139134,
+      1.494378078910299,
+      -1.0495121487122558,
+      -0.03725814530966462,
+      -0.9604427674852404,
+      1.373596188451443,
+      -0.0004930777647814617,
+      -0.02472060842213532
+    ],
+    [
+      -0.8217446035997964,
+      0.5882295789114317,
+      -0.1946080620265973,
+      -0.12853612870347358,
+      0.09426060460560147,
+      0.6504895251697628,
+      -1.2824952661902782,
+      -0.09721506127297165
+    ],
+    [
+      -0.3820226676612259,
+      -0.9610544907266316,
+      -0.938190901132509,
+      1.9212804338424472,
+      -0.3567540283747753,
+      -0.9749968250683475,
+      1.8238946519176562,
+      0.3722931304256802
+    ]
+  ],
+  "n_clusters": 5,
+  "cluster_labels": {
+    "0": "Culture & Heritage Travellers",
+    "1": "Adventure & Trekking Seekers",
+    "2": "Budget Urban & Street Explorers",
+    "3": "Himalayan & Nature Explorers",
+    "4": "Coastal & Relaxation Vacationers"
+  },
+  "cluster_summaries": [
+    {
+      "cluster_id": 0,
+      "cluster_label": "Culture & Heritage Travellers",
+      "member_count": 34,
+      "member_percentage": 11.3,
+      "avg_spend_inr": 11469.55,
+      "avg_duration_days": 4.8,
+      "feature_profile": {
+        "nature": 0.36,
+        "culture": 0.88,
+        "adventure": 0.2,
+        "relaxation": 0.44
+      },
+      "preferred_categories": [
+        "Temples & Cultural Attractions",
+        "Heritage & Monuments"
+      ],
+      "description": "Characterized by high affinity for Culture & Heritage Travellers with average trip spend of \u20b911,469."
+    },
+    {
+      "cluster_id": 1,
+      "cluster_label": "Adventure & Trekking Seekers",
+      "member_count": 110,
+      "member_percentage": 36.7,
+      "avg_spend_inr": 14670.5,
+      "avg_duration_days": 4.0,
+      "feature_profile": {
+        "nature": 0.82,
+        "culture": 0.24,
+        "adventure": 0.83,
+        "relaxation": 0.3
+      },
+      "preferred_categories": [
+        "National Parks & Wildlife",
+        "Mountains & Trekking"
+      ],
+      "description": "Characterized by high affinity for Adventure & Trekking Seekers with average trip spend of \u20b914,670."
+    },
+    {
+      "cluster_id": 2,
+      "cluster_label": "Budget Urban & Street Explorers",
+      "member_count": 27,
+      "member_percentage": 9.0,
+      "avg_spend_inr": 10189.98,
+      "avg_duration_days": 4.2,
+      "feature_profile": {
+        "nature": 0.35,
+        "culture": 0.89,
+        "adventure": 0.21,
+        "relaxation": 0.46
+      },
+      "preferred_categories": [
+        "Temples & Cultural Attractions",
+        "Heritage & Monuments"
+      ],
+      "description": "Characterized by high affinity for Budget Urban & Street Explorers with average trip spend of \u20b910,189."
+    },
+    {
+      "cluster_id": 3,
+      "cluster_label": "Himalayan & Nature Explorers",
+      "member_count": 78,
+      "member_percentage": 26.0,
+      "avg_spend_inr": 5081.66,
+      "avg_duration_days": 4.1,
+      "feature_profile": {
+        "nature": 0.35,
+        "culture": 0.63,
+        "adventure": 0.45,
+        "relaxation": 0.44
+      },
+      "preferred_categories": [
+        "Temples & Cultural Attractions",
+        "Heritage & Monuments"
+      ],
+      "description": "Characterized by high affinity for Himalayan & Nature Explorers with average trip spend of \u20b95,081."
+    },
+    {
+      "cluster_id": 4,
+      "cluster_label": "Coastal & Relaxation Vacationers",
+      "member_count": 51,
+      "member_percentage": 17.0,
+      "avg_spend_inr": 23530.92,
+      "avg_duration_days": 4.9,
+      "feature_profile": {
+        "nature": 0.45,
+        "culture": 0.19,
+        "adventure": 0.24,
+        "relaxation": 0.9
+      },
+      "preferred_categories": [
+        "Hill Stations",
+        "Beaches & Islands"
+      ],
+      "description": "Characterized by high affinity for Coastal & Relaxation Vacationers with average trip spend of \u20b923,530."
+    }
+  ],
+  "evaluation_results": {
+    "algorithm": "KMeans",
+    "n_clusters": 5,
+    "silhouette_score": 0.3758,
+    "inertia": 700.52,
+    "elbow_curve": [
+      {
+        "k": 2,
+        "inertia": 1584.98,
+        "silhouette_score": 0.3433
+      },
+      {
+        "k": 3,
+        "inertia": 885.3,
+        "silhouette_score": 0.481
+      },
+      {
+        "k": 4,
+        "inertia": 747.32,
+        "silhouette_score": 0.4
+      },
+      {
+        "k": 5,
+        "inertia": 700.52,
+        "silhouette_score": 0.3758
+      },
+      {
+        "k": 6,
+        "inertia": 607.56,
+        "silhouette_score": 0.3052
+      },
+      {
+        "k": 7,
+        "inertia": 551.4,
+        "silhouette_score": 0.3131
+      }
+    ],
+    "features": [
+      "nature_affinity",
+      "culture_affinity",
+      "adventure_affinity",
+      "relaxation_affinity",
+      "wildlife_affinity",
+      "heritage_affinity",
+      "budget_normalized",
+      "duration_normalized"
+    ],
+    "cluster_labels": {
+      "0": "Culture & Heritage Travellers",
+      "1": "Adventure & Trekking Seekers",
+      "2": "Budget Urban & Street Explorers",
+      "3": "Himalayan & Nature Explorers",
+      "4": "Coastal & Relaxation Vacationers"
+    },
+    "cluster_summaries": [
+      {
+        "cluster_id": 0,
+        "cluster_label": "Culture & Heritage Travellers",
+        "member_count": 34,
+        "member_percentage": 11.3,
+        "avg_spend_inr": 11469.55,
+        "avg_duration_days": 4.8,
+        "feature_profile": {
+          "nature": 0.36,
+          "culture": 0.88,
+          "adventure": 0.2,
+          "relaxation": 0.44
+        },
+        "preferred_categories": [
+          "Temples & Cultural Attractions",
+          "Heritage & Monuments"
+        ],
+        "description": "Characterized by high affinity for Culture & Heritage Travellers with average trip spend of \u20b911,469."
+      },
+      {
+        "cluster_id": 1,
+        "cluster_label": "Adventure & Trekking Seekers",
+        "member_count": 110,
+        "member_percentage": 36.7,
+        "avg_spend_inr": 14670.5,
+        "avg_duration_days": 4.0,
+        "feature_profile": {
+          "nature": 0.82,
+          "culture": 0.24,
+          "adventure": 0.83,
+          "relaxation": 0.3
+        },
+        "preferred_categories": [
+          "National Parks & Wildlife",
+          "Mountains & Trekking"
+        ],
+        "description": "Characterized by high affinity for Adventure & Trekking Seekers with average trip spend of \u20b914,670."
+      },
+      {
+        "cluster_id": 2,
+        "cluster_label": "Budget Urban & Street Explorers",
+        "member_count": 27,
+        "member_percentage": 9.0,
+        "avg_spend_inr": 10189.98,
+        "avg_duration_days": 4.2,
+        "feature_profile": {
+          "nature": 0.35,
+          "culture": 0.89,
+          "adventure": 0.21,
+          "relaxation": 0.46
+        },
+        "preferred_categories": [
+          "Temples & Cultural Attractions",
+          "Heritage & Monuments"
+        ],
+        "description": "Characterized by high affinity for Budget Urban & Street Explorers with average trip spend of \u20b910,189."
+      },
+      {
+        "cluster_id": 3,
+        "cluster_label": "Himalayan & Nature Explorers",
+        "member_count": 78,
+        "member_percentage": 26.0,
+        "avg_spend_inr": 5081.66,
+        "avg_duration_days": 4.1,
+        "feature_profile": {
+          "nature": 0.35,
+          "culture": 0.63,
+          "adventure": 0.45,
+          "relaxation": 0.44
+        },
+        "preferred_categories": [
+          "Temples & Cultural Attractions",
+          "Heritage & Monuments"
+        ],
+        "description": "Characterized by high affinity for Himalayan & Nature Explorers with average trip spend of \u20b95,081."
+      },
+      {
+        "cluster_id": 4,
+        "cluster_label": "Coastal & Relaxation Vacationers",
+        "member_count": 51,
+        "member_percentage": 17.0,
+        "avg_spend_inr": 23530.92,
+        "avg_duration_days": 4.9,
+        "feature_profile": {
+          "nature": 0.45,
+          "culture": 0.19,
+          "adventure": 0.24,
+          "relaxation": 0.9
+        },
+        "preferred_categories": [
+          "Hill Stations",
+          "Beaches & Islands"
+        ],
+        "description": "Characterized by high affinity for Coastal & Relaxation Vacationers with average trip spend of \u20b923,530."
+      }
+    ],
+    "total_profiles_analyzed": 300
+  }
+}

@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 520" width="100%" height="100%">
+  <defs>
+    <!-- Dark Navy Gradient Background -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#080D1A" />
+      <stop offset="50%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#080D1A" />
+    </linearGradient>
+
+    <!-- Bar Gradients -->
+    <linearGradient id="barGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0284C7" />
+      <stop offset="100%" stop-color="#38BDF8" />
+    </linearGradient>
+    <linearGradient id="barGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#059669" />
+      <stop offset="100%" stop-color="#34D399" />
+    </linearGradient>
+    <linearGradient id="barGrad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D97706" />
+      <stop offset="100%" stop-color="#FBBF24" />
+    </linearGradient>
+    <linearGradient id="barGrad4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0D9488" />
+      <stop offset="100%" stop-color="#2DD4BF" />
+    </linearGradient>
+    <linearGradient id="barGrad5" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E11D48" />
+      <stop offset="100%" stop-color="#FB7185" />
+    </linearGradient>
+
+    <!-- Card Background -->
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0F172A" stop-opacity="0.8" />
+    </linearGradient>
+
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.5" />
+    </filter>
+  </defs>
+
+  <style>
+    .title { font-family: 'Segoe UI', Inter, -apple-system, sans-serif; font-size: 22px; font-weight: 800; fill: #F8FAFC; letter-spacing: -0.5px; }
+    .subtitle { font-family: 'Segoe UI', Inter, -apple-system, sans-serif; font-size: 13px; font-weight: 400; fill: #94A3B8; }
+    .label { font-family: 'Segoe UI', Inter, -apple-system, sans-serif; font-size: 13px; font-weight: 600; fill: #E2E8F0; }
+    .count { font-family: 'Segoe UI', Inter, -apple-system, sans-serif; font-size: 14px; font-weight: 700; fill: #F8FAFC; }
+    .pct { font-family: 'Segoe UI', Inter, -apple-system, sans-serif; font-size: 11px; font-weight: 500; fill: #94A3B8; }
+    .axis-label { font-family: 'Segoe UI', Inter, -apple-system, sans-serif; font-size: 11px; fill: #64748B; }
+    .grid-line { stroke: #1E293B; stroke-dasharray: 4, 4; stroke-width: 1; }
+    .stat-label { font-family: 'Segoe UI', Inter, -apple-system, sans-serif; font-size: 11px; fill: #94A3B8; text-transform: uppercase; letter-spacing: 0.5px; }
+    .stat-value { font-family: 'Segoe UI', Inter, -apple-system, sans-serif; font-size: 18px; font-weight: 800; fill: #F8FAFC; }
+  </style>
+
+  <!-- Background Canvas -->
+  <rect width="900" height="520" rx="16" fill="url(#bgGrad)" />
+  <rect x="1" y="1" width="898" height="518" rx="15" fill="none" stroke="#1E293B" stroke-width="1.5" />
+
+  <!-- Header Title -->
+  <text x="40" y="52" class="title">Tourist Distribution per Behavioral Cluster (k = 5)</text>
+  <text x="40" y="74" class="subtitle">Unsupervised K-Means Behavioral Mining on DimTourist Profiles | Evaluated via Silhouette Optimization (s = 0.3758)</text>
+
+  <!-- Summary KPI Badges (Top Right) -->
+  <g transform="translate(620, 28)">
+    <rect width="115" height="48" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1" />
+    <text x="12" y="20" class="stat-label">Total Profiles</text>
+    <text x="12" y="39" class="stat-value" fill="#38BDF8">300</text>
+  </g>
+  <g transform="translate(745, 28)">
+    <rect width="115" height="48" rx="8" fill="#1E293B" stroke="#334155" stroke-width="1" />
+    <text x="12" y="20" class="stat-label">Silhouette</text>
+    <text x="12" y="39" class="stat-value" fill="#34D399">0.3758</text>
+  </g>
+
+  <!-- Chart Area Frame -->
+  <!-- Grid Lines (0, 25, 50, 75, 100, 125) -->
+  <!-- X origin = 310, Y origin = 110, Width = 530, Max scale = 125 tourists (530 / 125 = 4.24 px per tourist) -->
+  
+  <g transform="translate(310, 105)">
+    <!-- Vertical Grid lines -->
+    <line x1="0" y1="0" x2="0" y2="340" stroke="#334155" stroke-width="1.5" />
+    <line x1="106" y1="0" x2="106" y2="340" class="grid-line" />
+    <line x1="212" y1="0" x2="212" y2="340" class="grid-line" />
+    <line x1="318" y1="0" x2="318" y2="340" class="grid-line" />
+    <line x1="424" y1="0" x2="424" y2="340" class="grid-line" />
+    <line x1="530" y1="0" x2="530" y2="340" class="grid-line" />
+
+    <!-- X-Axis Labels -->
+    <text x="0" y="360" text-anchor="middle" class="axis-label">0</text>
+    <text x="106" y="360" text-anchor="middle" class="axis-label">25</text>
+    <text x="212" y="360" text-anchor="middle" class="axis-label">50</text>
+    <text x="318" y="360" text-anchor="middle" class="axis-label">75</text>
+    <text x="424" y="360" text-anchor="middle" class="axis-label">100</text>
+    <text x="530" y="360" text-anchor="middle" class="axis-label">125</text>
+    <text x="265" y="382" text-anchor="middle" class="axis-label" font-weight="600">Tourist Count (Persons)</text>
+  </g>
+
+  <!-- Bars & Labels -->
+
+  <!-- Row 1: Cluster 1: Adventure & Trekking (Count: 110, width = 110 * 4.24 = 466.4) -->
+  <g transform="translate(0, 125)">
+    <circle cx="48" cy="16" r="6" fill="#34D399" />
+    <text x="64" y="15" class="label">Adventure &amp; Trekking Seekers</text>
+    <text x="64" y="31" class="pct">Cluster 1 | High Altitude, Trekking, Budget</text>
+    
+    <rect x="310" y="0" width="466.4" height="34" rx="6" fill="url(#barGrad2)" filter="url(#shadow)" />
+    <text x="786" y="22" class="count" fill="#34D399">110</text>
+    <text x="815" y="22" class="pct">(36.7%)</text>
+  </g>
+
+  <!-- Row 2: Cluster 3: Himalayan & Nature Explorers (Count: 78, width = 78 * 4.24 = 330.7) -->
+  <g transform="translate(0, 190)">
+    <circle cx="48" cy="16" r="6" fill="#2DD4BF" />
+    <text x="64" y="15" class="label">Himalayan &amp; Nature Explorers</text>
+    <text x="64" y="31" class="pct">Cluster 3 | Valleys, Lakes, Eco-Tourism</text>
+    
+    <rect x="310" y="0" width="330.7" height="34" rx="6" fill="url(#barGrad4)" filter="url(#shadow)" />
+    <text x="650" y="22" class="count" fill="#2DD4BF">78</text>
+    <text x="674" y="22" class="pct">(26.0%)</text>
+  </g>
+
+  <!-- Row 3: Cluster 4: Coastal & Relaxation (Count: 51, width = 51 * 4.24 = 216.2) -->
+  <g transform="translate(0, 255)">
+    <circle cx="48" cy="16" r="6" fill="#FB7185" />
+    <text x="64" y="15" class="label">Coastal &amp; Relaxation Vacationers</text>
+    <text x="64" y="31" class="pct">Cluster 4 | Beaches, Backwaters, Leisure</text>
+    
+    <rect x="310" y="0" width="216.2" height="34" rx="6" fill="url(#barGrad5)" filter="url(#shadow)" />
+    <text x="536" y="22" class="count" fill="#FB7185">51</text>
+    <text x="560" y="22" class="pct">(17.0%)</text>
+  </g>
+
+  <!-- Row 4: Cluster 0: Culture & Heritage (Count: 34, width = 34 * 4.24 = 144.1) -->
+  <g transform="translate(0, 320)">
+    <circle cx="48" cy="16" r="6" fill="#38BDF8" />
+    <text x="64" y="15" class="label">Culture &amp; Heritage Travellers</text>
+    <text x="64" y="31" class="pct">Cluster 0 | Palaces, Forts, UNESCO Monuments</text>
+    
+    <rect x="310" y="0" width="144.1" height="34" rx="6" fill="url(#barGrad1)" filter="url(#shadow)" />
+    <text x="464" y="22" class="count" fill="#38BDF8">34</text>
+    <text x="488" y="22" class="pct">(11.3%)</text>
+  </g>
+
+  <!-- Row 5: Cluster 2: Budget Urban & Street (Count: 27, width = 27 * 4.24 = 114.5) -->
+  <g transform="translate(0, 385)">
+    <circle cx="48" cy="16" r="6" fill="#FBBF24" />
+    <text x="64" y="15" class="label">Budget Urban &amp; Street Explorers</text>
+    <text x="64" y="31" class="pct">Cluster 2 | Short Trips, Food, Low Budget</text>
+    
+    <rect x="310" y="0" width="114.5" height="34" rx="6" fill="url(#barGrad3)" filter="url(#shadow)" />
+    <text x="434" y="22" class="count" fill="#FBBF24">27</text>
+    <text x="458" y="22" class="pct">(9.0%)</text>
+  </g>
+
+  <!-- Footer Watermark / Metadata -->
+  <g transform="translate(40, 485)">
+    <text x="0" y="12" class="axis-label" fill="#475569">Source: DimTourist Dimension Table | Algorithm: K-Means++ with Z-Score Standardization | Total Samples N = 300</text>
+  </g>
+</svg>
